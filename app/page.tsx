@@ -1,65 +1,229 @@
-import Image from "next/image";
+"use client";
+import { useEffect, useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
+import Technologies from "./components/Technologies";
+import Contact from "./components/Contact";
+import Hero from "./components/Hero";
+import About from "./components/About";
+import Services from "./components/Services";
+import Portfolio from "./components/Portfolio";
+import Blog from "./components/Blog";
+import Footer from "./components/Footer";
 
 export default function Home() {
+  const [activeSection, setActiveSection] = useState<string>("home");
+
+  useEffect(() => {
+    const sectionIds = [
+      "home",
+      "about",
+      "service",
+      "portfolio",
+      "blog",
+      "contact",
+    ];
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting && entry.target.id) {
+            setActiveSection(entry.target.id);
+          }
+        });
+      },
+      {
+        root: null,
+        threshold: 0.2,
+        rootMargin: "-20% 0px -60% 0px",
+      }
+    );
+
+    sectionIds.forEach((id) => {
+      const el = document.getElementById(id);
+      if (el) observer.observe(el);
+    });
+
+    return () => observer.disconnect();
+  }, []);
+  const [mobileOpen, setMobileOpen] = useState(false);
+  const closeMobile = () => setMobileOpen(false);
+  const openMobile = () => setMobileOpen(true);
+
+  const menuVariants = {
+    hidden: { x: "100%", opacity: 0 },
+    visible: {
+      x: 0,
+      opacity: 1,
+      transition: { type: "spring", stiffness: 300, damping: 30 }
+    },
+    exit: { x: "100%", opacity: 0, transition: { duration: 0.2 } },
+  } as const;
+
+  // Lock body scroll when mobile menu is open
+  useEffect(() => {
+    const body = document.body;
+    if (mobileOpen) {
+      body.classList.add("no-scroll");
+    } else {
+      body.classList.remove("no-scroll");
+    }
+    return () => body.classList.remove("no-scroll");
+  }, [mobileOpen]);
+
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <>
+      {/* JSON-LD structured data for WebSite and Person */}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{
+        __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          "url": "https://samuel-onyebueke.netlify.app/",
+          "name": "Samuel Onyebueke Portfolio",
+          "publisher": {
+            "@type": "Person",
+            "name": "Samuel Onyebueke",
+            "sameAs": [
+              "https://x.com/ONYEBUEKEIFEAN2",
+              "https://linkedin.com/in/onyebueke-ifeanyi-1b52411b4",
+              "https://github.com/Samuel202093",
+            ]
+          },
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://samuel-onyebueke.netlify.app/?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+          }
+        })
+      }} />
+      <div id="__next">
+        <div className="br-app">
+          <div className="fixed-navbar">
+            <header id="header" className="site-header header-style-1">
+              <nav className="navigation navbar navbar-default">
+                <div className="container-fluid">
+                  <div className="navbar-header">
+                    <button type="button" className="open-btn" onClick={openMobile}>
+                      <span className="sr-only">Toggle navigation</span>
+                      <span className="icon-bar"></span>
+                      <span className="icon-bar"></span>
+                      <span className="icon-bar"></span>
+                    </button>
+                    <a className="navbar-brand" href="/">
+                      <img src="images/hero/logo2.png" alt="Samuel Onyebueke logo" style={{ width: "300px", height: "auto" }}/>
+                    </a>
+                  </div>
+                  {/* Desktop navigation holder remains for larger screens */}
+                  <div
+                    id="navbar"
+                    className="navbar-collapse navigation-holder"
+                  >
+                    
+
+                    <button className="close-navbar">
+                      <i className="fa fa-times" aria-hidden="true"></i>
+                    </button>
+                    <button className="close-navbar-2">
+                      <i className="fa fa-times" aria-hidden="true"></i>
+                    </button>
+
+                     
+                    <ul className="nav navbar-nav">
+
+                      <li className={"home" + (activeSection === "home" ? " active" : "")}>
+                        <a href="#home">Home</a>
+                      </li>
+                      <li className={"about" + (activeSection === "about" ? " active" : "")}>
+                        <a href="#about">About Me</a>
+                      </li>
+                      <li className={"service" + (activeSection === "service" ? " active" : "")}>
+                        <a href="#service">Service</a>
+                      </li>
+                      <li className={"protfolio" + (activeSection === "portfolio" ? " active" : "")}>
+                        <a href="#portfolio">Portfolio</a>
+                      </li>
+                      <li className={"blog" + (activeSection === "blog" ? " active" : "")}>
+                        <a href="#blog">Blog</a>
+                      </li>
+                      <li className={"contact" + (activeSection === "contact" ? " active" : "")}>
+                        <a href="#contact">Contact</a>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <AnimatePresence>
+                    {mobileOpen && (
+                      <motion.div
+                        key="mobile-menu"
+                        initial="hidden"
+                        animate="visible"
+                        exit="exit"
+                        variants={menuVariants}
+                        className="mobile-menu-panel"
+                      >
+                        <button className="close-navbar" onClick={closeMobile}>
+                          <i className="fa fa-times" aria-hidden="true"></i>
+                        </button>
+                        <ul className="nav navbar-nav" onClick={closeMobile}>
+                          <li className={"home" + (activeSection === "home" ? " active" : "")}>
+                            <a href="#home">Home</a>
+                          </li>
+                          <li className={"about" + (activeSection === "about" ? " active" : "")}>
+                            <a href="#about">About Me</a>
+                          </li>
+                          <li className={"service" + (activeSection === "service" ? " active" : "")}>
+                            <a href="#service">Service</a>
+                          </li>
+                          <li className={"protfolio" + (activeSection === "portfolio" ? " active" : "")}>
+                            <a href="#portfolio">Portfolio</a>
+                          </li>
+                          <li className={"blog" + (activeSection === "blog" ? " active" : "")}>
+                            <a href="#blog">Blog</a>
+                          </li>
+                          <li className={"contact" + (activeSection === "contact" ? " active" : "")}>
+                            <a href="#contact">Contact</a>
+                          </li>
+                        </ul>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                  <div className="menu-open-btn-holder">
+                    <button className="menu-open-btn" onClick={openMobile}>
+                      <span></span>
+                      <span></span>
+                      <span></span>
+                    </button>
+                  </div>
+                  <div className="menu-open-btn-holder">
+                    <button className="menu-open-btn">
+                      <span></span>
+                      <span></span>
+                      <span></span>
+                    </button>
+                  </div>
+                </div>
+              </nav>
+            </header>
+          </div>
+          <Hero />
+          <div>
+            <About />
+          </div>
+          <div>
+            <Services />
+          </div>
+          <div>
+            <Portfolio />
+          </div>
+         
+          <Technologies />
+          <div>
+            <Blog />
+          </div>
+          <div>
+            <Contact />
+          </div>
+          <Footer />
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+      </div>
+    </>
   );
 }
