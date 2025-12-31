@@ -2382,6 +2382,11 @@ body {
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
 }
+.view-work-btn{
+  text-decoration: none;
+  color: wheat;
+}
+
 @media (max-width: 767px) {
   body {
     font-size: 14px;
@@ -5307,7 +5312,7 @@ ul.smothscroll a .fi:before {
   margin-bottom: 20px;
   font-weight: 300;
 }
-.tp-protfolio-text button {
+.tp-protfolio-text a {
   display: inline-block;
   font-size: 18px;
   color: #fff;
@@ -5316,11 +5321,11 @@ ul.smothscroll a .fi:before {
   position: relative;
   border: 0;
 }
-.tp-protfolio-text button:focus,
-.tp-protfolio-text button:hover {
+.tp-protfolio-text a:focus,
+.tp-protfolio-text a:hover {
   color: #fff;
 }
-.tp-protfolio-text button:after {
+.tp-protfolio-text a:after {
   position: absolute;
   left: 0;
   bottom: -5px;
@@ -5329,7 +5334,7 @@ ul.smothscroll a .fi:before {
   background: #fff;
   content: "";
 }
-.tp-protfolio-text button:before {
+.tp-protfolio-text a:before {
   position: absolute;
   top: 0;
   left: 0;
@@ -5341,7 +5346,7 @@ ul.smothscroll a .fi:before {
   content: "";
   transition: all 0.3s;
 }
-.tp-protfolio-text button:hover:before {
+.tp-protfolio-text a:hover:before {
   left: 0;
   opacity: 0.3;
 }

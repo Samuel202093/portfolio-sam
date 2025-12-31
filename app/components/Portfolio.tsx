@@ -23,8 +23,17 @@ export default function Portfolio() {
                     <h2>Fullstack</h2>
                     <span>Photography Web Application</span>
                     <button>
-                      <a href="https://najeesphotography.com">View Work</a>
+                      <a href="https://najeesphotography.com"  target="_blank"
+                      rel="noopener noreferrer">View Work</a>
                     </button>
+                            {/* <a
+                      href="https://najeesphotography.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="view-work-btn text-white"  // Add a class for styling
+                    >
+                      View Work
+                    </a> */}
                   </div>
                 </div>
 
@@ -36,7 +45,8 @@ export default function Portfolio() {
                     <h2>Fullstack</h2>
                     <span>Spiritan HECAP Admin Dashboard</span>
                     <button>
-                      <a>View Work</a>
+                      <a href="https://spiritan-hecap.netlify.app/" target="_blank"
+                      rel="noopener noreferrer">View Work</a>
                     </button>
                   </div>
                 </div>
@@ -49,7 +59,8 @@ export default function Portfolio() {
                     <h2>Backend</h2>
                     <span>ExamFlow Engine</span>
                     <button>
-                      <a href="https://github.com/Samuel202093/exam_server">View Work</a>
+                      <a href="https://github.com/Samuel202093/exam_server"  target="_blank"
+                      rel="noopener noreferrer">View Work</a>
                     </button>
                   </div>
                 </div>
@@ -62,7 +73,8 @@ export default function Portfolio() {
                     <h2>Fullstack</h2>
                     <span>CareerLink</span>
                     <button>
-                      <a href="https://github.com/Samuel202093/jobsite_laravel_project">View Work</a>
+                      <a href="https://github.com/Samuel202093/jobsite_laravel_project" target="_blank"
+                      rel="noopener noreferrer">View Work</a>
                     </button>
                   </div>
                 </div>
@@ -75,7 +87,8 @@ export default function Portfolio() {
                     <h2>Fullstack</h2>
                     <span>High-Performance Merchant Storefront with Dynamic Cart & Dashboard</span>
                     <button>
-                      <a href="https://github.com/Samuel202093/e-commerce-frontend">View Work</a>
+                      <a href="https://github.com/Samuel202093/e-commerce-frontend" target="_blank"
+                      rel="noopener noreferrer">View Work</a>
                     </button>
                   </div>
                 </div>
