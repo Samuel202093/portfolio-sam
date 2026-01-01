@@ -108,7 +108,7 @@ export default function Home() {
                       <span className="icon-bar"></span>
                     </button>
                     <a className="navbar-brand" href="/">
-                      <img src="images/hero/logo2.png" alt="Samuel Onyebueke logo" style={{ width: "300px", height: "auto" }}/>
+                      <img src="images/hero/logo2.png" alt="Samuel Onyebueke logo" className="w-[500px] h-[200px]y object-contain"/>
                     </a>
                   </div>
                   {/* Desktop navigation holder remains for larger screens */}

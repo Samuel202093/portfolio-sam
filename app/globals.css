@@ -15,6 +15,11 @@ a {
   box-sizing: border-box;
 }
 
+.image-logo{
+  width: 300px !important;
+  height: 200px !important;
+}
+
 /* Font Awesome is loaded via CDN to avoid missing local assets */
 .fa {
   display: inline-block;

@@ -26,14 +26,7 @@ export default function Portfolio() {
                       <a href="https://najeesphotography.com"  target="_blank"
                       rel="noopener noreferrer">View Work</a>
                     </button>
-                            {/* <a
-                      href="https://najeesphotography.com"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="view-work-btn text-white"  // Add a class for styling
-                    >
-                      View Work
-                    </a> */}
+           
                   </div>
                 </div>
 
@@ -45,7 +38,7 @@ export default function Portfolio() {
                     <h2>Fullstack</h2>
                     <span>Spiritan HECAP Admin Dashboard</span>
                     <button>
-                      <a href="https://spiritan-hecap.netlify.app/" target="_blank"
+                      <a href="https://github.com/Samuel202093/spiritan" target="_blank"
                       rel="noopener noreferrer">View Work</a>
                     </button>
                   </div>
@@ -93,18 +86,19 @@ export default function Portfolio() {
                   </div>
                 </div>
 
-                {/* <div className="tp-protfolio-single">
+                <div className="tp-protfolio-single">
                   <div className="tp-protfolio-img">
-                    <img src="images/protfolio/pdesign/img-1.jpg" alt="Product Design" />
+                    <img src="images/projects/access-control.png" alt="Product Design" />
                   </div>
                   <div className="tp-protfolio-text">
-                    <h2>Product Design</h2>
-                    <span>Illustration . Art Direction</span>
+                    <h2>Backend</h2>
+                    <span>Real Estate Access Control & Security API</span>
                     <button>
-                      <a>View Work</a>
+                      <a href="https://github.com/Samuel202093/access-control" target="_blank"
+                      rel="noopener noreferrer">View Work</a>
                     </button>
                   </div>
-                </div> */}
+                </div>
               </div>
             </div>
           </div>
