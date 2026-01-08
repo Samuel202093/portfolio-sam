@@ -15,48 +15,94 @@ export default function Blog() {
         </div>
       </div>
       <div className="container">
-        <div className="row justify-content-center">
+        <div className="row g-4">
+          {/* Blog Post 1 */}
           <div className="col-lg-4 col-md-6 col-12">
-            <div className="tp-blog-item">
-              <div className="tp-blog-item-wrap">
+            <div className="tp-blog-item h-100">
+              <div className="tp-blog-item-wrap h-100 d-flex flex-column">
                 <div className="tp-blog-img">
-                  <img src="images/blog/1.jpg" alt="Blog item" />
+                  <img src="images/blog/1.jpg" alt="JWT is the silent engine behind your favorite apps" className="img-fluid w-100" />
                 </div>
-                <div className="tp-blog-content">
-                  <h2>
-                    <a className="text-white" aria-label="JWT is the silent engine behind your favorite apps" href="https://www.linkedin.com/posts/onyebueke-ifeanyi-1b52411b4_jwt-jsonwebtoken-websecurity-activity-7396481892964958208-8So5?utm_source=share&utm_medium=member_desktop&rcm=ACoAADHeY9kB3_UP3SuB37drKGJrFU7OlyQVaHU">𝐉𝐖𝐓 𝐢𝐬 𝐭𝐡𝐞 𝐬𝐢𝐥𝐞𝐧𝐭 𝐞𝐧𝐠𝐢𝐧𝐞 𝐛𝐞𝐡𝐢𝐧𝐝 𝐲𝐨𝐮𝐫 𝐟𝐚𝐯𝐨𝐫𝐢𝐭𝐞 𝐚𝐩𝐩𝐬</a>
+                <div className="tp-blog-content flex-grow-1 d-flex flex-column">
+                  <h2 className="h5 mb-3">
+                    <a className="text-white text-decoration-none" aria-label="JWT is the silent engine behind your favorite apps" href="https://www.linkedin.com/posts/onyebueke-ifeanyi-1b52411b4_jwt-jsonwebtoken-websecurity-activity-7396481892964958208-8So5?utm_source=share&utm_medium=member_desktop&rcm=ACoAADHeY9kB3_UP3SuB37drKGJrFU7OlyQVaHU">
+                      JWT is the silent engine behind your favorite apps
+                    </a>
                   </h2>
-  
+                  <div className="mt-auto">
+                    <a href="https://www.linkedin.com/posts/onyebueke-ifeanyi-1b52411b4_jwt-jsonwebtoken-websecurity-activity-7396481892964958208-8So5?utm_source=share&utm_medium=member_desktop&rcm=ACoAADHeY9kB3_UP3SuB37drKGJrFU7OlyQVaHU" className="btn btn-outline-light btn-sm">
+                      Read More →
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
+
+          {/* Blog Post 2 */}
           <div className="col-lg-4 col-md-6 col-12">
-            <div className="tp-blog-item">
-              <div className="tp-blog-item-wrap">
+            <div className="tp-blog-item h-100">
+              <div className="tp-blog-item-wrap h-100 d-flex flex-column">
                 <div className="tp-blog-img">
-                  <img src="images/blog/2.jpg" alt="Blog item" />
+                  <img src="images/blog/2.jpg" alt="Lazy or Eager? Your Strategy for Non-Redundant Queries" className="img-fluid w-100" />
                 </div>
-                <div className="tp-blog-content">
-                  <h2>
-                    <a className="text-white" aria-label="Lazy or Eager? Your Strategy for Non-Redundant Queries." href="https://www.linkedin.com/posts/onyebueke-ifeanyi-1b52411b4_webperformance-frontenddevelopment-reactjs-activity-7386318725076992000-Fgaa?utm_source=share&utm_medium=member_desktop&rcm=ACoAADHeY9kB3_UP3SuB37drKGJrFU7OlyQVaHU">𝐋𝐚𝐳𝐲 𝐨𝐫 𝐄𝐚𝐠𝐞𝐫? 𝐘𝐨𝐮𝐫 𝐒𝐭𝐫𝐚𝐭𝐞𝐠𝐲 𝐟𝐨𝐫 𝐍𝐨𝐧-𝐑𝐞𝐝𝐮𝐧𝐝𝐚𝐧𝐭 𝐐𝐮𝐞𝐫𝐢𝐞𝐬.</a>
+                <div className="tp-blog-content flex-grow-1 d-flex flex-column">
+                  <h2 className="h5 mb-3">
+                    <a className="text-white text-decoration-none" aria-label="Lazy or Eager? Your Strategy for Non-Redundant Queries" href="https://www.linkedin.com/posts/onyebueke-ifeanyi-1b52411b4_webperformance-frontenddevelopment-reactjs-activity-7386318725076992000-Fgaa?utm_source=share&utm_medium=member_desktop&rcm=ACoAADHeY9kB3_UP3SuB37drKGJrFU7OlyQVaHU">
+                      Lazy or Eager? Your Strategy for Non-Redundant Queries
+                    </a>
                   </h2>
-  
+                  <div className="mt-auto">
+                    <a href="https://www.linkedin.com/posts/onyebueke-ifeanyi-1b52411b4_webperformance-frontenddevelopment-reactjs-activity-7386318725076992000-Fgaa?utm_source=share&utm_medium=member_desktop&rcm=ACoAADHeY9kB3_UP3SuB37drKGJrFU7OlyQVaHU" className="btn btn-outline-light btn-sm">
+                      Read More →
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
+
+          {/* Blog Post 3 */}
           <div className="col-lg-4 col-md-6 col-12">
-            <div className="tp-blog-item">
-              <div className="tp-blog-item-wrap">
+            <div className="tp-blog-item h-100">
+              <div className="tp-blog-item-wrap h-100 d-flex flex-column">
                 <div className="tp-blog-img">
-                  <img src="images/blog/3.jpg" alt="Blog item" />
+                  <img src="images/blog/3.jpg" alt="Understanding export const dynamic in Next.js" className="img-fluid w-100" />
                 </div>
-                <div className="tp-blog-content">
-                  <h2>
-                    <a className="text-white" aria-label="Understanding export const dynamic in Next.js" href="https://www.linkedin.com/posts/onyebueke-ifeanyi-1b52411b4_nextjs-webdevelopment-performanceoptimization-activity-7360960089345744896-cU0X?utm_source=share&utm_medium=member_desktop&rcm=ACoAADHeY9kB3_UP3SuB37drKGJrFU7OlyQVaHU">𝗨𝗻𝗱𝗲𝗿𝘀𝘁𝗮𝗻𝗱𝗶𝗻𝗴 𝗲𝘅𝗽𝗼𝗿𝘁 𝗰𝗼𝗻𝘀𝘁 𝗱𝘆𝗻𝗮𝗺𝗶𝗰 𝗶𝗻 𝗡𝗲𝘅𝘁.𝗷𝘀</a>
+                <div className="tp-blog-content flex-grow-1 d-flex flex-column">
+                  <h2 className="h5 mb-3">
+                    <a className="text-white text-decoration-none" aria-label="Understanding export const dynamic in Next.js" href="https://www.linkedin.com/posts/onyebueke-ifeanyi-1b52411b4_nextjs-webdevelopment-performanceoptimization-activity-7360960089345744896-cU0X?utm_source=share&utm_medium=member_desktop&rcm=ACoAADHeY9kB3_UP3SuB37drKGJrFU7OlyQVaHU">
+                      Understanding export const dynamic in Next.js
+                    </a>
                   </h2>
-               
+                  <div className="mt-auto">
+                    <a href="https://www.linkedin.com/posts/onyebueke-ifeanyi-1b52411b4_nextjs-webdevelopment-performanceoptimization-activity-7360960089345744896-cU0X?utm_source=share&utm_medium=member_desktop&rcm=ACoAADHeY9kB3_UP3SuB37drKGJrFU7OlyQVaHU" className="btn btn-outline-light btn-sm">
+                      Read More →
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Blog Post 4 */}
+          <div className="col-lg-4 col-md-6 col-12">
+            <div className="tp-blog-item h-100">
+              <div className="tp-blog-item-wrap h-100 d-flex flex-column">
+                <div className="tp-blog-img">
+                  <img src="images/blog/4.avif" alt="Idempotency & Rate Limiting in Production APIs" className="img-fluid w-100" />
+                </div>
+                <div className="tp-blog-content flex-grow-1 d-flex flex-column">
+                  <h2 className="h5 mb-3">
+                    <a className="text-white text-decoration-none" aria-label="Idempotency & Rate Limiting in Production APIs" href="https://www.linkedin.com/posts/onyebueke-ifeanyi-1b52411b4_systemdesign-softwarearchitecture-backendengineering-activity-7414986083928711168-jfEz?utm_source=share&utm_medium=member_desktop&rcm=ACoAADHeY9kB3_UP3SuB37drKGJrFU7OlyQVaHU">
+                      Idempotency & Rate Limiting in Production APIs
+                    </a>
+                  </h2>
+                  <div className="mt-auto">
+                    <a href="https://www.linkedin.com/posts/onyebueke-ifeanyi-1b52411b4_systemdesign-softwarearchitecture-backendengineering-activity-7414986083928711168-jfEz?utm_source=share&utm_medium=member_desktop&rcm=ACoAADHeY9kB3_UP3SuB37drKGJrFU7OlyQVaHU" className="btn btn-outline-light btn-sm">
+                      Read More →
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>

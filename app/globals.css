@@ -4383,6 +4383,126 @@ button:focus {
   color: #fff;
   cursor: pointer;
 }
+
+/* Enhanced Blog Grid Styles */
+.blog-section .row.g-4 {
+  margin: 0 -12px;
+}
+
+.blog-section .row.g-4 > [class*="col-"] {
+  padding: 0 12px;
+  margin-bottom: 24px;
+}
+
+.tp-blog-item {
+  background: #111;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+}
+
+.tp-blog-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.tp-blog-item-wrap {
+  background: #111;
+  height: 100%;
+}
+
+.tp-blog-img {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 16/9;
+}
+
+.tp-blog-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.tp-blog-item:hover .tp-blog-img img {
+  transform: scale(1.05);
+}
+
+.tp-blog-content {
+  padding: 20px;
+  background: #111;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.tp-blog-content h2 {
+  font-size: 18px;
+  line-height: 1.4;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.tp-blog-content h2 a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.tp-blog-content h2 a:hover {
+  color: #ddd;
+}
+
+.tp-blog-content .btn {
+  margin-top: auto;
+  align-self: flex-start;
+  border: 1px solid #fff;
+  color: #fff;
+  background: transparent;
+  transition: all 0.3s ease;
+  font-size: 14px;
+  padding: 6px 16px;
+  border-radius: 20px;
+}
+
+.tp-blog-content .btn:hover {
+  background: #fff;
+  color: #111;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1199px) {
+  .tp-blog-content h2 {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 767px) {
+  .tp-blog-content {
+    padding: 15px;
+  }
+  
+  .tp-blog-content h2 {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+  .tp-blog-content .btn {
+    font-size: 13px;
+    padding: 5px 14px;
+  }
+}
+
+@media (max-width: 575px) {
+  .blog-section .row.g-4 > [class*="col-"] {
+    margin-bottom: 20px;
+  }
+  
+  .tp-blog-content h2 {
+    font-size: 15px;
+  }
+}
 @media (max-width: 1400px) {
   .blog-section .grid .details h3 {
     font-size: 20px;
