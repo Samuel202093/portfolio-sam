@@ -46,6 +46,12 @@ export const techStack: TechItem[] = [
     logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
     invert: true,
   },
+    {
+    name: "Nest.js",
+    category: "Backend",
+    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nestjs/nestjs-original.svg",
+    invert: true,
+  },
   {
     name: "Node.js",
     category: "Runtime",

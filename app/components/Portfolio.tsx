@@ -60,13 +60,13 @@ export default function Portfolio() {
 
                 <div className="tp-protfolio-single">
                   <div className="tp-protfolio-img">
-                    <img src="images/projects/laravel.png" alt="Modern BG" />
+                    <img src="images/projects/laravel-api.png" alt="Modern BG" />
                   </div>
                   <div className="tp-protfolio-text">
-                    <h2>Fullstack</h2>
-                    <span>CareerLink</span>
+                    <h2>Backend</h2>
+                    <span>E-commerce APIs</span>
                     <button>
-                      <a href="https://github.com/Samuel202093/jobsite_laravel_project" target="_blank"
+                      <a href="https://github.com/Samuel202093/ecommerce-laravel-api" target="_blank"
                       rel="noopener noreferrer">View Work</a>
                     </button>
                   </div>
@@ -78,9 +78,9 @@ export default function Portfolio() {
                   </div>
                   <div className="tp-protfolio-text">
                     <h2>Fullstack</h2>
-                    <span>High-Performance Merchant Storefront with Dynamic Cart & Dashboard</span>
+                    <span>Smart School System with Attendance Tracking & Admin Dashboard</span>
                     <button>
-                      <a href="https://github.com/Samuel202093/e-commerce-frontend" target="_blank"
+                      <a href="https://github.com/Samuel202093/Laurel-Systems-Frontend" target="_blank"
                       rel="noopener noreferrer">View Work</a>
                     </button>
                   </div>
