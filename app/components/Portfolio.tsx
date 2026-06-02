@@ -74,7 +74,7 @@ export default function Portfolio() {
 
                 <div className="tp-protfolio-single">
                   <div className="tp-protfolio-img">
-                    <img src="images/projects/hi-gadget2.png" alt="Visual Design" />
+                    <img src="images/projects/laurel-app.png" alt="Visual Design" />
                   </div>
                   <div className="tp-protfolio-text">
                     <h2>Fullstack</h2>
