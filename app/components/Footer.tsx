@@ -33,12 +33,12 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/" aria-label="Twitter">
+                <a target="_blank" rel="noopener noreferrer" href="https://x.com/ONYEBUEKEIFEAN2" aria-label="Twitter">
                   <i className="fa fa-twitter"></i>
                 </a>
               </li>
               <li>
-                <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/" aria-label="LinkedIn">
+                <a target="_blank" rel="noopener noreferrer" href="www.linkedin.com/in/onyebueke-ifeanyi-1b52411b4" aria-label="LinkedIn">
                   <i className="fa fa-linkedin"></i>
                 </a>
               </li>
@@ -49,7 +49,7 @@ export default function Footer() {
         <div className="row">
           <div className="col-lg-12 col-md-12">
             <p className="copyright">
-              © 2020 - 2024 Samuel Onyebueke — All Rights Reserved.
+              © 2022 - {new Date().getFullYear()} Samuel Onyebueke — All Rights Reserved.
             </p>
           </div>
         </div>

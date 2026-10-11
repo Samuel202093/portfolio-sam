@@ -17,13 +17,13 @@ export default function Portfolio() {
               <div className="portfolio-grid">
                 <div className="tp-protfolio-single">
                   <div className="tp-protfolio-img">
-                    <img src="images/projects/najee-photo.png" alt="najee" />
+                    <img src="images/projects/laurevo.png" alt="najee" />
                   </div>
                   <div className="tp-protfolio-text">
                     <h2>Fullstack</h2>
-                    <span>Photography Web Application</span>
+                    <span>Smart School System with AI Integration, Payment Integration & Admin Dashboard</span>
                     <button>
-                      <a href="https://najeesphotography.com"  target="_blank"
+                      <a href="https://laurevo.cloud"  target="_blank"
                       rel="noopener noreferrer">View Work</a>
                     </button>
            
@@ -72,7 +72,7 @@ export default function Portfolio() {
                   </div>
                 </div>
 
-                <div className="tp-protfolio-single">
+                {/* <div className="tp-protfolio-single">
                   <div className="tp-protfolio-img">
                     <img src="images/projects/laurel-app.png" alt="Visual Design" />
                   </div>
@@ -84,7 +84,7 @@ export default function Portfolio() {
                       rel="noopener noreferrer">View Work</a>
                     </button>
                   </div>
-                </div>
+                </div> */}
 
                 <div className="tp-protfolio-single">
                   <div className="tp-protfolio-img">

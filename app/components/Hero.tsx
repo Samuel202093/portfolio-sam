@@ -23,9 +23,9 @@ export default function Hero() {
                     Contact Me
                   </a>
                   <a
-                    href="/resume/samuel-onyebueke-ifeanyi-cv.pdf"
+                    href="/resume/Onyebueke_Ifeanyi_Samuel_Resume.pdf"
                     className="template-btn go-contact-area"
-                    download="samuel-onyebueke-ifeanyi-cv.pdf"
+                    download="Onyebueke_Ifeanyi_Samuel_Resume.pdf"
                   >
                     Resume
                   </a>
